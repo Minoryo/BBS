@@ -1,14 +1,30 @@
 <?php
 
+function h($str) {
+  return htmlspecialchars($str, ENT_QUOTES, 'utf-8');
+}
 
 class Bbs {
-  private $_title = [];
+  private $_keijibanfile = 'keijiban.txt';
+  private $_title = '';
 
-  public function getTitle() {
-    return $this->_title;
+  public function writeData() {
+    $this->_title = h($_POST['title']) . "\n";
+    $fp = fopen($this->_keijibanfile, 'a');
+    fwrite($fp, $this->_title);
+    fclose($fp);
   }
 
-  public function setTitle($title) {
-    array_push($this->_title, $title);
+  public function getData() {
+    $fp = fopen($this->_keijibanfile, 'r');
+    $data = [];
+    if ($fp) {
+      while ($line = fgets($fp)) {
+        array_push($data, $line);
+      }
+    }
+
+    fclose($fp);
+    return $data;
   }
 }
