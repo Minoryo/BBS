@@ -4,6 +4,9 @@
   btn.addEventListener('click', function() {
     let form = document.forms.bbs_form;
     let title = form.title.value;
+    if (last_check() === false) {
+      return;
+    }
     if (form_check(title.length)) {
       form.submit();
     } else {
@@ -12,6 +15,11 @@
     }
 
   });
+
+  function last_check() {
+    let flg = confirm('送信してもいいですか？');
+    return flg;
+  }
 
 
 

@@ -1,0 +1,36 @@
+body {
+  font-size: 20px;
+  font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+
+.btn {
+  background: #00aaff;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px auto;
+
+}
+
+.bbs_area {
+  border: 1px solid #ccddff;
+  width: 500px;
+  margin: 0 auto;
+  background: #ccffaa;
+}
+
+.bbs_area > li {
+  width: 400px;
+  font-size: 25px;
+  color: black;
+  list-style: none;
+  margin: 10px auto;
+  background: #aaffff;
+  padding: 10px 0;
+}

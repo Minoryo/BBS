@@ -18,16 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 <head>
   <meta charset="utf-8">
   <title>BBS</title>
-  <style>
-    .btn {
-      background: #00aaff;
-      width: 100px;
-      text-align: center;
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 5px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">

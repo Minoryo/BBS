@@ -9,7 +9,8 @@ class Bbs {
   private $_title = '';
 
   public function writeData() {
-    $this->_title = h($_POST['title']) . "\n";
+    $date = date('Y年m月d日 H:i:s');
+    $this->_title = h($_POST['title']) . $date . "\n";
     $fp = fopen($this->_keijibanfile, 'a');
     fwrite($fp, $this->_title);
     fclose($fp);
