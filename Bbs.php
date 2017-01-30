@@ -13,6 +13,7 @@ class Bbs {
     $fp = fopen($this->_keijibanfile, 'a');
     fwrite($fp, $this->_title);
     fclose($fp);
+    header("Location: http:");
   }
 
   public function getData() {

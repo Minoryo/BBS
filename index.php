@@ -39,6 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 
 
     <ul class="bbs_area">
+      <?php foreach($data as $title): ?>
+        <li><?php echo h($title); ?></li>
+      <?php endforeach; ?>
     </ul>
   </div>
 
